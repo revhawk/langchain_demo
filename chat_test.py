@@ -27,7 +27,7 @@ while True:
     message_history.add_user_message(user_input)
 
     # Get response from model using the full history
-    response = chat_model(messages=message_history.messages)
+    response = chat_model.invoke(message_history.messages)
 
     # Add bot response to history
     message_history.add_ai_message(response.content)
